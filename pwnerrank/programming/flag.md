@@ -1,5 +1,5 @@
 Connecting to the service shows 4 types of question "min,max,sum,avg"
-
+Also it send Empty array and array with spaces instead of numbers
 
 ```python
 from pwn import *
