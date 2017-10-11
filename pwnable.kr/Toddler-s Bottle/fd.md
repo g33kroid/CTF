@@ -74,7 +74,35 @@ int main(int argc, char* argv[], char* envp[]){
 
 }
 ```
-Now we have **0x1234 = 4660 decemial** now if we insert this number will lead **fd = 0** so the buffer will ask **stdin** for data
+Now we have **0x1234 = 4660 decemial** now if we insert this number will lead **fd = 0** so the buffer will ask **stdin** for data 
+To Get a Close look on what happen before we enter the Pass 
+
+This is the Linux File IO that it was saying to look for and also the read function 
+
+```c
+read(int fildes, void *buf, size_t nbytes);
+```
+in the read function the fildes we can use 0 1 2 to use the linux IO streams and below what are those streams
+
+```text
+Streams
+
+Input and output in the Linux environment is distributed across three streams. These streams are:
+
+    standard input (stdin)
+
+    standard output (stdout)
+
+    standard error (stderr)
+
+The streams are also numbered:
+
+    stdin (0)
+
+    stdout (1)
+
+    stderr (2)
+```
 now we can pass **LETMEWIN** Then we have our flag 
 
 ```shell
