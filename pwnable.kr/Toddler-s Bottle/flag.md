@@ -37,7 +37,21 @@ AWAVAUATS
 uSL9
 >t		.
 ```
-There is UPX lets see if we can decompress it ..... Bingo Its true UPX decompressed it and we can have readable strings 
+There is UPX lets see if we can decompress it ..... 
+```shell
+┌─[✗]─[micr0b0t@parrot]─[/media/micr0b0t/Data/Tools/upx-3.94-amd64_linux]
+└──╼ $./upx -d ~/Desktop/pwnable/flag2
+                       Ultimate Packer for eXecutables
+                          Copyright (C) 1996 - 2017
+UPX 3.94        Markus Oberhumer, Laszlo Molnar & John Reiser   May 12th 2017
+
+        File size         Ratio      Format      Name
+   --------------------   ------   -----------   -----------
+    883745 <-    335288   37.94%   linux/amd64   flag2
+
+Unpacked 1 file.
+```
+Bingo Its true UPX decompressed it and we can have readable strings 
 Now lets try to decompile the ELF File 
 ```shell
 ┌─[micr0b0t@parrot]─[~/Desktop/pwnable/flag]
